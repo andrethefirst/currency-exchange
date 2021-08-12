@@ -4,7 +4,7 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 
 module.exports = {
-    entry: '', //fuill in entry point
+    entry: './src/index.js', //fuill in entry point
     output: {
       filename: 'bundle.js',
       path: path.resolve(__dirname, 'dist')
@@ -16,8 +16,8 @@ module.exports = {
     plugins: [
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
-        title: '', //fill in title
-        template: '', //fill in where you want it to end up
+        title: 'Currency Exchange', //fill in title
+        template: './src/index.html', //fill in where you want it to end up
         inject: 'body'
       })
     ],
