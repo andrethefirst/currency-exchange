@@ -9,3 +9,24 @@ function clear() {
   $('.showError').text('');
 }
 
+$(document).ready(function() {
+  $('#currencyChange').on('click', function() {
+    const usdAmount = $('#currency').val();
+    const newCurrency = $('#currency-chosen').val();
+    let errors = false;
+
+    if(newCurrency === 'ERROR') {
+      isError = true;
+    }
+    
+    let promise = CurrencyService.currencyConvert(errors);
+    promise.then(function(response) {
+      const body = JSON.parse(response);
+      clear();
+      $('.showCurrency').text(`$${usdAmount} in ${newCurrency} is equal to ${usdAmount * body.conversion_rates[newCurrency]} ${newCurrency}.`);
+    }).catch(function(error) {
+      clear();
+      $('.showError').text(`Error has been caught: ${error}`);
+    });
+  });
+});

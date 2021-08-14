@@ -2,12 +2,12 @@ export default class CurrencyService {
   static currencyConvert(errors) {
     return new Promise(function(resolve, reject) {
       let request = new XMLHttpRequest();
-      let url = '';
+      let url = ``;
 
       if(errors) {
-        url = 'https://v6.exchangerate-api.com/v6/12345abcde/latest/USD';
+        url = `https://v6.exchangerate-api.com/v6/12345abcde/latest/USD`;
       } else {
-        url = 'https://v6.exchangerate-api.com/v6/2911b5b91c212768e88641a5/latest/USD';
+        url = `https://v6.exchangerate-api.com/v6/2911b5b91c212768e88641a5/latest/USD`;
       }
 
       request.onload = function() {
