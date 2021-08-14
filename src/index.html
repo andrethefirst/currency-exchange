@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en-US">
 <head>
-  <title>
-
-  </title>
+  <title>Currency Exchange</title>
 </head>
 <body>
-  
+  <div class = "container">
+    <h1>Convert any currency!</h1>
+    <label for="currency">Enter chosen amount in US dollars:</label>
+    <input id="currency" type="text">
+    <label for="currency-chosen">Select the currency you want to convert to:</label>
+    <select id="chosen currency" required>
+      <option value="PHP">Philippine Peso</option>
+      <option value="RSD">Serbian Dinar</option>
+      <option value="VND">Vietnamese Đồng</option>
+      <option value="INR">Indian Rupee</option>
+      <option value="EGP">Egyptian Pound</option>
+    </select>
+    <button class="btn" id="currencyExchange">Convert!</button>
+    <div class="showError"></div>
+    <div class="showCurrency"></div>
+  </div>  
 </body>
 </html>
