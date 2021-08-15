@@ -1,0 +1,20 @@
+h1{
+  color: green;
+  text-align: center;
+}
+
+.btn{
+  display: block;
+}
+
+body {
+  background: white;
+}
+
+.container{
+  align-items: center;
+}
+
+#displayCurrency {
+  display: none;
+}

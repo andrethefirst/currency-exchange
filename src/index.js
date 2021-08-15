@@ -16,7 +16,7 @@ $(document).ready(function() {
     let errors = false;
 
     if(newCurrency === 'ERROR') {
-      isError = true;
+      errors = true;
     }
     
     let promise = CurrencyService.currencyConvert(errors);
